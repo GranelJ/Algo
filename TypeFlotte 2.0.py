@@ -8,13 +8,13 @@ class Flotte:
 	# -> Flotte
 
 
-	def Coule(self,numbateau):
-	#Renvoie True si le bateau de numéro donné est coulé et modifie le nombre de bateaux restants
-	#Flotte x Bateau -> Bool
+	def Coule(self,numbateau,grille):
+	#Renvoie True si le bateau de numero donne est coule et modifie le nombre de bateaux restants
+	#Flotte x Bateau x Grille -> Bool
 
 	def BateauxRestants(self):
 	#Renvoie le nombre de bateaux restants
 	#Flotte -> Int
 
-	"""Propriétés:
+	"""Proprietes:
 	(1) Coule (f,1) == True => BateauxRestants(f) = BateauxRestants(f) - 1"""

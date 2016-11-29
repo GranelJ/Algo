@@ -1,8 +1,8 @@
 #Type Bateau
 
 class Bateau:
-	def __init__(self,colonne,ligne,taille,num,dir): 
-	#Creer un bateau de taille donnée, avec un numéro donné, une direction donnée, aux coordonnées données
+	def __init__(self,colonne,ligne,taille,num,direction): 
+	#Creer un bateau de taille donnee, avec un numero donne, une direction donnee, aux coordonnees donnees
 	#pre : 21 > colonne >= 0
 	#pre : 21 > ligne  >= 0
 	#pre : 0 < taille < 5
@@ -28,4 +28,3 @@ class Bateau:
 	def ColonneBateau(self):
 	#Renvoie la colonne du bateau
 	#Bateau -> Int
-	

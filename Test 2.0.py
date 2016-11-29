@@ -38,7 +38,7 @@ def test_Grille():
 	TypeBateau.PositionnerBateau(bateau1)
 	assert TypeBateau.ValeurCoord(1,5) == 1
 	assert TypeBateau.ValeurCoord(21,21) == 0
-
+	
 
 
 def test_Flotte():
