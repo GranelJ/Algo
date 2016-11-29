@@ -36,10 +36,16 @@ def test_Grille():
 	assert TypeGrille.Verification(bateau1) == True
 	assert TypeGrille.Verification(bateau2) == True
 	TypeBateau.PositionnerBateau(bateau1)
-	assert TypeBateau.ValeurCoord(1,5) == 1
-	assert TypeBateau.ValeurCoord(21,21) == 0
-	
-
+	assert TypeGrille.ValeurCoord(1,5) == 1
+	assert TypeGrille.ValeurCoord(21,21) == 0
+	assert TypeGrille.EnVue(1,8) == True
+	assert TypeGrille.EnVue(12,5) == True
+	assert TypeGrille.EnVue(12,15) == False
+	TypeGrille.ModifVal(4,15,15)
+	assert TypeGrille.ValeurCoord(15,15) == 4
+	assert TypeGrille.Touche(1,5) == True
+	assert TypeGrille.ValeurCoord(1,5) == 0
+	return True
 
 def test_Flotte():
 	bateau1 = TypeBateau.Bateau(1,5,1,1,0)
