@@ -13,7 +13,6 @@ def test_bateau():
 	assert TypeBateau.LigneBateau(bateau) == 10
 	assert TypeBateau.ColonneBateau(bateau) == 11
 	return True
-#teste la propriete 1 de la fonction f 
 
 
 def test_Joueur():
