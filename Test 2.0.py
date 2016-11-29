@@ -13,7 +13,7 @@ def test_bateau():
 	assert TypeBateau.LigneBateau(bateau) == 10
 	assert TypeBateau.ColonneBateau(bateau) == 11
 	return True
-#teste la propriété 1 de la fonction f 
+#teste la propriete 1 de la fonction f 
 
 
 def test_Joueur():
@@ -31,6 +31,13 @@ def test_Joueur():
 
 def test_Grille():
 	grille = TypeGrille.Grille(21,21)
+	bateau1 = TypeBateau.Bateau(1,5,1,1,0)
+	bateau2 = TypeBateau.Bateau(21,1,1,1)
+	assert TypeGrille.Verification(bateau1) == True
+	assert TypeGrille.Verification(bateau2) == True
+	TypeBateau.PositionnerBateau(bateau1)
+	assert TypeBateau.ValeurCoord(1,5) == 1
+	assert TypeBateau.ValeurCoord(21,21) == 0
 
 
 
@@ -46,3 +53,5 @@ def test_Flotte():
 	grille = TypeGrille.ModifVal(0,1,5)
 	assert TypeFlotte.Coule(1,grille) == True
 	assert TypeFlotte.BateauxRestants() == 4
+	assert TypeFlotte.Coule(4,grille) == False
+	return True
