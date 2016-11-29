@@ -28,11 +28,4 @@ class Bateau:
 	def ColonneBateau(self):
 	#Renvoie la colonne du bateau
 	#Bateau -> Int
-
-	def ModifLigneBateau(self, Nligne):
-	#Modifie la ligne du bateau
-	#pre: 21 > Nligne >= 0
 	
-	def ModifColonneBateau(self, Ncolonne):
-	#Modifie la colonne du bateau
-	#pre: 21 > Ncolonne >= 0
