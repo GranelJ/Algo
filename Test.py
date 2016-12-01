@@ -33,7 +33,7 @@ def test_Grille():
 	bateau1 = TypeBateau.Bateau(1,5,1,1,0)
 	bateau2 = TypeBateau.Bateau(21,1,1,1)
 	assert TypeGrille.Verification(bateau1) == True
-	assert TypeGrille.Verification(bateau2) == True
+	assert TypeGrille.Verification(bateau2) == False
 	TypeBateau.PositionnerBateau(bateau1)
 	assert TypeGrille.ValeurCoord(1,5) == 1
 	assert TypeGrille.ValeurCoord(21,21) == 0
