@@ -73,8 +73,7 @@ eb.ajouterBateau(bat)
 print eb.tailleEB()==2 # Doit renvoyer True
 print eb.safe_bateau(bat) # Doit renvoyer True
 print eb.est_present_pos(p) # Doit renvoyer True
-print eb.nb_bat_safe()  == 1 # Doit renvoyer True
-	"""
+print eb.nb_bat_safe()  == 1 # Doit renvoyer True"""
 
 	
 	

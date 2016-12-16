@@ -27,7 +27,7 @@ class Bateau:
 		l = self.positions().positions()
 		m = int(0)
 		for k in range(0,len(l)):
-			if Position.toucher(l[k]) :
+			if l[k].toucher() :
 				m = m + 1
 		return m == self.taillebat()					# Renvoie TRUE si le bateau passé en paramètre est coulé ce qui implique que toutes ses positions ont été touchées ( utiliser fonction positions) ,renvoie FALSE sinon. 
 							

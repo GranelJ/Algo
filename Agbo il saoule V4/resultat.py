@@ -28,18 +28,19 @@ class Resultat :
 						    # ordonnee_tir(creer_resultat(j,x,y)) = y
 
 	def resultat_tir(self): # resultat_tir : Resultat -> String 
-		p = Position(self.absice_tir(),self.ordonnee_tir())
-		if p.est_valide_position() :
+		pos = Position(self.absice_tir(),self.ordonnee_tir())
+		if pos.est_valide_position() :
 			for k in range (0,((self.player).ensbateaux()).tailleEB()):
 				if ((self.player).ensbateaux().bateaux()[k].est_toucher(self.absice_tir(),self.ordonnee_tir())) :
-					l = (self.player).ensbateaux().bateaux()[k].positions() #liste des positions du bateau k
+					l = (self.player).ensbateaux().bateaux()[k].positions().positions() #liste des positions du bateau k
 					i = int(0)
-					while (Position.absice(l[i]) != self.absice_tir()) or (Position.ordonnee(l[i]) != self.ordonnee_tir()) :
+					while (l[i].absice() != pos.absice()) or (l[i].ordonnee() != pos.ordonnee()) :
 						i = i + 1
-					if Position.toucher(l[i]) :
-						return "Touché"
+					if l[i].toucher() :
 						if (self.player).ensbateaux().bateaux()[k].est_detruit() :
-							return "Coulé"
+							return "Touché Coulé"
+						else : 
+							return "Touché"
 					else :
 						return "A l'eau"
 				elif (self.player).ensbateaux().bateaux()[k].est_envue(self.absice_tir(),self.ordonnee_tir()) :
@@ -70,7 +71,7 @@ class Resultat :
 
 
 #Test unitaire
-'''
+"""
 ensp = Enspositions(2)
 p = Position(1,2)
 p2 = Position(5,6)
@@ -86,7 +87,7 @@ res3 = Resultat(j,1,2)
 #print res.joueur().etat() # Doit renvoyer False car on travaille sur le joueur inactif
 print res.resultat_tir() # Doit renvoyer a l'eau
 print res2.resultat_tir() # Doit renvoyer En vue
-print res3.resultat_tir() # Doit renvoyer Touché coulé'''
+print res3.resultat_tir() # Doit renvoyer Touché coulé"""
 
 
 
